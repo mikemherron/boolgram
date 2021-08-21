@@ -1,0 +1,196 @@
+.App {
+  color: rgb(38, 38, 38);
+  font-size:14px;
+}
+
+.App-logo{
+  position:absolute;
+  left:100px;
+}
+
+.App-search-container{
+  position:absolute;
+  left:200px;
+  right:200px;
+}
+
+.App-icon-container{
+  position:absolute;
+  right:200px;
+}
+
+.App-search-input{
+  width:300px;
+  margin:0 auto
+}
+
+.App-header {
+  display: flex;
+  height: 60px;
+  padding-top:20px;
+  border-bottom: 1px solid #ccc;
+  flex-direction: column;
+  background-color: white;
+} 
+
+.Profile {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.ProfileImage {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  margin:2px;
+  /* width:56px;
+  height: 56px; */
+}
+
+.ProfileImage--small{
+  width:20px;
+  height: 20px;
+}
+
+.ProfileImage--medium {
+  width:36px;
+  height: 36px;
+}
+
+.ProfileImage--large{
+  width:56px;
+  height: 56px;
+}
+
+.ProfileHighlight {
+  z-index: -1000;
+  border-radius: 50%;
+  /* width:64px;
+  height: 64px; */
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  display: inline-block;
+  position: absolute;
+}
+
+.ProfileHighlight--small{
+  width:28px;
+  height: 28px;
+}
+
+.ProfileHighlight--medium{
+  width:44px;
+  height: 44px;
+}
+
+.ProfileHighlight--large{
+  width:64px;
+  height: 64px;
+}
+
+.Stories {
+    border: 1px solid #dbdbdb;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    margin-bottom: 24px;
+    margin-top: 0;
+    padding: 15px;
+}
+
+.Stories ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding:2px;
+  margin:0;
+}
+
+.Stories li {
+  width:80px;
+  padding:0 4px;
+}
+
+.Stories-profileName{
+  font-size:12px;
+  letter-spacing: .01em;
+  max-width: 74px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+
+.App-main {
+  max-width: 935px; 
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.App-main-feeds {
+    float: left;
+    margin-right: 28px;
+    max-width: 614px;
+    width: 100%;
+}
+
+.App-sidebar {
+  float:left; 
+}
+
+.Post {
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  margin-bottom:30px;
+}
+
+.Post-likes {
+  display:flex;
+  flex-direction: row;
+  padding-left:16px;
+  font-size:14px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.Post-header {
+  height:60px;
+  padding:3px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Post-header-name {
+  color: #262626;
+  font-weight: bold;
+  margin-left: 14px;
+  font-size: 13px;
+}
+
+.Post-header-image {
+  object-fit: cover;
+  width: 100%;
+}
+
+.Post-toolbar {
+  margin-top:4px;
+  padding-left:16px;
+  display: flex;
+  flex-direction:row;
+}
+
+.Post-toolbar .IconButton img {
+  width:24px;
+  height:24px;
+}
+
+.IconButton {
+  padding:5px;
+}
+
+.Post-text {
+  padding-left:16px;
+}
+
+/* todo - common post section with padding left and margin */
