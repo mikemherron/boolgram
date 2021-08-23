@@ -1,9 +1,12 @@
 import { SIZE_MEDIUM, SIZE_SMALL } from './ProfileImage';
 
 import ProfileImage from './ProfileImage';
-import PostCommentList from './PostCommentList';
+import PostComment from './PostComment';
 import IconButtonHeart from './IconButtonHeart';
 import IconButtonComment from './IconButtonComment';
+import moment from 'moment';
+
+const MAX_SHOWN_COMMENTS = 2
 
 function Post(props) {
     return (
@@ -23,17 +26,27 @@ function Post(props) {
                 <IconButtonHeart />
                 <IconButtonComment />
             </section>
-                {props.post.likes.length > 0 &&
-                    <section className="Post-likes">
-                        <ProfileImage showHighlight={false} size={SIZE_SMALL} imageUrl={props.post.likes[0].profile_picture}/>
-                        <span>Liked by <strong>{props.post.likes[0].username}</strong> and <strong>{props.post.likes.length-1}</strong> others</span>
-                    </section>
-                }
+            {props.post.likes.length > 0 &&
+                <section className="Post-likes">
+                    <ProfileImage showHighlight={false} size={SIZE_SMALL} imageUrl={props.post.likes[0].profile_picture}/>
+                    <span>Liked by <strong>{props.post.likes[0].username}</strong> and <strong>{props.post.likes.length-1}</strong> others</span>
+                </section>
+            }
             <section className="Post-text">
-                <span><strong>{props.post.profile_name}</strong> {props.post.post_text}</span>
+                <PostComment username={props.post.profile_name} text={props.post.post_text} />
             </section>
-            <section className="Post-comments">
-                <PostCommentList comments={props.post.comments} />
+            {props.post.comments.length > 0 &&
+                <section className="Post-comments">
+                    {props.post.comments.length > MAX_SHOWN_COMMENTS && 
+                        <div className="Post-view-all-comments"><span>View all {props.post.comments.length} comments</span></div>
+                    }
+                    {props.post.comments.slice(0, MAX_SHOWN_COMMENTS).map(comment=> (
+                        <PostComment username={comment.username} text={comment.text} /> ))
+                    }
+                </section>
+            }
+            <section className="Post-time">
+                <span>{moment(props.post.date.date, 'YYYY-MM-DD HH:mm:ss.S').fromNow()}</span>
             </section>
         </article>
   );
