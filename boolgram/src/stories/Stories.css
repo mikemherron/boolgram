@@ -9,23 +9,23 @@
 }
 
 .Stories ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  padding:2px;
-  margin:0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    margin: 0;
 }
 
 .Stories li {
-  min-width: 70px;
-  padding:0 4px;
+    min-width: 70px;
+    padding: 0 4px;
 }
 
-.Stories-profileName{
-  font-size:12px;
-  letter-spacing: .01em;
-  max-width: 74px;
-  text-align: center;
-  text-overflow: ellipsis;
-  overflow:hidden;
+.Stories-profileName {
+    font-size: 12px;
+    letter-spacing: .01em;
+    max-width: 74px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

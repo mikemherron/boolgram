@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 function useFetchJson(url) {
-    
+
     const [json, setJson] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
     const [hasError, setHasError] = useState(false)
@@ -19,7 +19,7 @@ function useFetchJson(url) {
                     setJson(json)
                 }
             }
-            catch(e) {
+            catch (e) {
                 setHasError(true)
             }
             finally {
@@ -29,9 +29,9 @@ function useFetchJson(url) {
 
         fetchJson()
 
-    }, [ url ])
+    }, [url])
 
-    return [ json, isLoading, hasError ]
+    return [json, isLoading, hasError]
 }
 
 export default useFetchJson;

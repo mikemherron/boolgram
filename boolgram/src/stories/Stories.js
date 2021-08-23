@@ -9,13 +9,16 @@ function Stories(props) {
 
     if (props.showLoading) {
         profileItems = [];
-        for (let i=0; i !==PLACEHOLDER_STORIES; i++) {
-            profileItems.push(<li key={i}><ProfileImageLarge showLoading={true} /><div className="Stories-profileName">&nbsp;</div></li>)
+        for (let i = 0; i !== PLACEHOLDER_STORIES; i++) {
+            profileItems.push(
+                <li key={i}>
+                    <ProfileImageLarge showLoading={true} />
+                    <div className="Stories-profileName">&nbsp;</div>
+                </li>)
         }
     }
-
     else {
-        profileItems = props.profiles.map( (profile, index) => (
+        profileItems = props.profiles.map((profile, index) => (
             <li key={index}>
                 <ProfileImageLarge imageUrl={profile.profile_picture} />
                 <div className="Stories-profileName">

@@ -1,6 +1,10 @@
+h1 {
+  margin: 0;
+}
+
 .App {
   color: rgb(38, 38, 38);
-  font-size:14px;
+  font-size: 14px;
   background-color: #fafafa;
 }
 
@@ -9,11 +13,11 @@
   height: 30px;
 }
 
-.App-search-container{
+.App-search-container {
   min-width: 240px;
 }
 
-.App-search-container input{
+.App-search-container input {
   width: 100%;
   background-color: #f5f5f5;
   border: 1px solid #CCC;
@@ -23,7 +27,7 @@
   color: #AAA;
 }
 
-.App-icon-container{
+.App-icon-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -34,11 +38,11 @@
   height: 54px;
   position: fixed;
   z-index: 200;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid #ccc;
   background-color: white;
-} 
+}
 
 .App-header-content {
   display: flex;
@@ -51,47 +55,43 @@
   margin: 0 auto;
 }
 
-h1 {
-  margin:0;
-}
-
 .App-main {
-  max-width: 935px; 
+  max-width: 935px;
   margin: 0 auto;
   padding-top: 95px;
 }
 
 .App-main-feeds {
-    float: left;
-    margin-right: 28px;
-    max-width: 614px;
-    width: 100%;
+  float: left;
+  margin-right: 28px;
+  max-width: 614px;
+  width: 100%;
 }
 
 .App-sidebar {
-  float:left; 
+  float: left;
   color: #CCC;
-  font-size:12px;
+  font-size: 12px;
   text-transform: uppercase;
   text-align: right;
-  padding:10px;
+  padding: 10px;
 }
 
 .Util-loading-background {
-	background: linear-gradient(-45deg, #fff, #aaa);
-	background-size: 400% 400%;
-	animation: gradient 2s ease infinite;
-	height: 100vh;
+  background: linear-gradient(-45deg, #fff, #aaa);
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
+  height: 100vh;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

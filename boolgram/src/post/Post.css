@@ -1,85 +1,84 @@
-
 .Post {
     background-color: white;
     border-radius: 3px;
     border: 1px solid #dbdbdb;
-    margin-bottom:30px;
-  }
-  
-  .Post-likes {
-    display:flex;
+    margin-bottom: 30px;
+}
+
+.Post-likes {
+    display: flex;
     flex-direction: row;
-    padding-left:11px;
-    font-size:14px;
+    padding-left: 11px;
+    font-size: 14px;
     align-items: center;
     margin-bottom: 5px;
-  }
-  
-  .Post-header {
-    height:60px;
-    padding:3px 10px;
+}
+
+.Post-header {
+    height: 60px;
+    padding: 3px 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  
-  .Post-Comment {
-    margin-bottom: 3px;
-  }
-  
-  .Post-header-placeholder {
-    background-color: #EEE;
-    height:20px;
-    width:150px;
-  }
+}
 
-  .Post-header-name {
+.Post-Comment {
+    margin-bottom: 3px;
+}
+
+.Post-header-placeholder {
+    background-color: #EEE;
+    height: 20px;
+    width: 150px;
+}
+
+.Post-header-name {
     color: #262626;
     font-weight: bold;
     margin-left: 14px;
     font-size: 13px;
-  }
-  
-  .Post-header-image {
+}
+
+.Post-header-image {
     object-fit: cover;
     width: 100%;
-  }
+}
 
-  .Post-header-image-loading {
-    height: 500px;
-  }
-  
-  .Post-toolbar {
-    margin-top:4px;
-    padding-left:11px;
+.Post-header-image-loading {
+    height: 400px;
+}
+
+.Post-toolbar {
+    margin-top: 4px;
+    padding-left: 11px;
     display: flex;
-    flex-direction:row;
-  }
-  
-  .Post-comments {
-    padding-left:16px;
-  }
-  
-  .Post-view-all-comments {
-    color:#8e8e8e;
+    flex-direction: row;
+}
+
+.Post-comments {
+    padding-left: 16px;
+}
+
+.Post-view-all-comments {
+    color: #8e8e8e;
     margin-bottom: 3px;
-  }
-  
-  .Post-toolbar .IconButton img {
-    width:24px;
-    height:24px;
-  }
-  .Post-time {
-    color:#8e8e8e;
+}
+
+.Post-toolbar .IconButton img {
+    width: 24px;
+    height: 24px;
+}
+
+.Post-time {
+    color: #8e8e8e;
     text-transform: uppercase;
     letter-spacing: .2px;
     line-height: 18px;
-    font-size:10px;
-    padding-left:16px;
+    font-size: 10px;
+    padding-left: 16px;
     margin: 5px 0;
-  }
-  
-  .Post-text {
-    padding-left:16px;
-  }
-  
+}
+
+.Post-text {
+    padding-left: 16px;
+}

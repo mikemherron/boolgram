@@ -8,7 +8,7 @@ function PostsContainer() {
 
   const [posts, isLoading, hasError] = useFetchJson(GET_POSTS_URL)
 
-  if(hasError) {
+  if (hasError) {
     return <Error message="Unable to load feed" />
   }
 
@@ -16,7 +16,7 @@ function PostsContainer() {
     return <Post showLoading={true} />
   }
 
-  return posts.map( (post, index) =>(<Post key={index} post={post}/>))
+  return posts.map((post, index) => (<Post key={index} post={post} />))
 }
 
 export default PostsContainer;

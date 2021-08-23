@@ -7,7 +7,7 @@ import IconHome from "./icon-home.svg"
 function IconButton(props) {
   return (
     <div className="IconButton">
-        <img src={props.imageSrc} alt={props.imageAlt || ' '}></img>
+      <img src={props.imageSrc} alt={props.imageAlt || ' '}></img>
     </div>
   );
 }

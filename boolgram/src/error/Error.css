@@ -1,10 +1,10 @@
 .Error-message {
- color: #CCC;
- font-size:12px;
- text-transform: uppercase;
+    color: #CCC;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 .Error {
     text-align: center;
-    padding:10px;
+    padding: 10px;
 }
