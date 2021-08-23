@@ -1,0 +1,30 @@
+.Stories {
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    margin-top: 0;
+    padding: 15px;
+}
+
+.Stories ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding:2px;
+  margin:0;
+}
+
+.Stories li {
+  min-width: 70px;
+  padding:0 4px;
+}
+
+.Stories-profileName{
+  font-size:12px;
+  letter-spacing: .01em;
+  max-width: 74px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}

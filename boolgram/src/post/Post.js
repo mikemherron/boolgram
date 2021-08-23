@@ -1,9 +1,8 @@
-import { SIZE_MEDIUM, SIZE_SMALL } from './ProfileImage';
-
-import ProfileImage from './ProfileImage';
+import './Post.css';
+import {ProfileImageMedium, ProfileImageSmall} from 'profile/ProfileImage';
+import {IconButtonHeart, IconButtonComment} from 'icons/IconButton';
 import PostComment from './PostComment';
-import IconButtonHeart from './IconButtonHeart';
-import IconButtonComment from './IconButtonComment';
+
 import moment from 'moment';
 
 const MAX_SHOWN_COMMENTS = 2
@@ -12,7 +11,7 @@ function Post(props) {
     return (
         <article className="Post">
             <header className="Post-header">
-                <ProfileImage size={SIZE_MEDIUM} imageUrl={props.post.profile_picture}/>
+                <ProfileImageMedium imageUrl={props.post.profile_picture}/>
                 <div className="Post-header-name">
                     <span>
                         {props.post.profile_name}
@@ -28,7 +27,7 @@ function Post(props) {
             </section>
             {props.post.likes.length > 0 &&
                 <section className="Post-likes">
-                    <ProfileImage showHighlight={false} size={SIZE_SMALL} imageUrl={props.post.likes[0].profile_picture}/>
+                    <ProfileImageSmall showHighlight={false} imageUrl={props.post.likes[0].profile_picture}/>
                     <span>Liked by <strong>{props.post.likes[0].username}</strong> and <strong>{props.post.likes.length-1}</strong> others</span>
                 </section>
             }
