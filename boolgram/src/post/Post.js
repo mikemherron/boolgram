@@ -1,8 +1,8 @@
 import './Post.css';
 import React from 'react';
-
 import moment from 'moment';
 import { Fragment } from 'react';
+
 import { ProfileImageMedium, ProfileImageSmall } from 'profile/ProfileImage';
 import { IconButtonHeart, IconButtonComment } from 'icons/IconButton';
 import PostComment from './PostComment';
@@ -36,7 +36,10 @@ function Post(props) {
                     {props.post.likes.length > 0 &&
                         <section className="Post-likes">
                             <ProfileImageSmall showHighlight={false} imageUrl={props.post.likes[0].profile_picture} />
-                            <span>Liked by <strong>{props.post.likes[0].username}</strong> and <strong>{props.post.likes.length - 1}</strong> others</span>
+                            <span>Liked by <strong>{props.post.likes[0].username}</strong> {props.post.likes.length > 1 && 
+                                <Fragment>and <strong>{props.post.likes.length - 1}</strong> {props.post.likes.length > 2 ? "others" : "other" }</Fragment>
+                            }
+                            </span>
                         </section>
                     }
                     <section className="Post-text">
