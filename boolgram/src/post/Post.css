@@ -33,7 +33,6 @@
     width:150px;
   }
 
-
   .Post-header-name {
     color: #262626;
     font-weight: bold;
@@ -44,6 +43,10 @@
   .Post-header-image {
     object-fit: cover;
     width: 100%;
+  }
+
+  .Post-header-image-loading {
+    height: 500px;
   }
   
   .Post-toolbar {

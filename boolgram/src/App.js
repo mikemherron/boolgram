@@ -29,9 +29,7 @@ function App() {
           <PostsContainer/>
         </section>
         <section className="App-sidebar">
-          some content 
-          will go here
-          in the future
+          Placeholder area for follow suggestions
         </section>
       </main>
     </div>

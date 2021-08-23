@@ -24,8 +24,8 @@ function Post(props) {
             </header>
             <section className="Post-header-image-container">
                 {props.showLoading 
-                 ? <img className="Post-header-image Util-loading-background"></img>
-                 : <img className="Post-header-image" src={props.post.post_image}></img> }
+                 ? <img className="Post-header-image Post-header-image-loading Util-loading-background" alt=""></img>
+                 : <img className="Post-header-image" src={props.post.post_image} alt="Post" ></img> }
             </section>
             {!props.showLoading && 
                 <Fragment>
@@ -47,8 +47,8 @@ function Post(props) {
                             {props.post.comments.length > MAX_SHOWN_COMMENTS && 
                                 <div className="Post-view-all-comments"><span>View all {props.post.comments.length} comments</span></div>
                             }
-                            {props.post.comments.slice(0, MAX_SHOWN_COMMENTS).map(comment=> (
-                                <PostComment username={comment.username} text={comment.text} /> ))
+                            {props.post.comments.slice(0, MAX_SHOWN_COMMENTS).map( (comment, index)=> (
+                                <PostComment key={index} username={comment.username} text={comment.text} /> ))
                             }
                         </section>
                     }

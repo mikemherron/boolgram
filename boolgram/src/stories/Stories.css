@@ -5,6 +5,7 @@
     margin-bottom: 24px;
     margin-top: 0;
     padding: 15px;
+    overflow: hidden;
 }
 
 .Stories ul {

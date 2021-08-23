@@ -5,14 +5,16 @@ const SIZE_MEDIUM = "medium";
 const SIZE_LARGE = "large";
 
 function ProfileImage(props, size) {
-    const showLoadingClass = props.showLoading===true ? "Util-loading-background" : "";
     const showHighlight = props.showLoading!==true && props.showHighlight!==false;
     return (
       <div className="Profile">
           { showHighlight && 
             <div className={`ProfileHighlight ProfileHighlight--${size}`}></div>
           }
-          <img className={`ProfileImage ${showLoadingClass} ProfileImage--${size}`} src={props.imageUrl}></img>
+          { props.showLoading 
+            ? <img className={`ProfileImage Util-loading-background ProfileImage--${size}`} alt=""></img>
+            : <img className={`ProfileImage ProfileImage--${size}`} src={props.imageUrl} alt="Profile"></img>
+          }
       </div>
     );
 }

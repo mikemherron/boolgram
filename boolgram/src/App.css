@@ -52,7 +52,6 @@
 }
 
 h1 {
-  text-transform: uppercase;
   margin:0;
 }
 
@@ -71,6 +70,11 @@ h1 {
 
 .App-sidebar {
   float:left; 
+  color: #CCC;
+  font-size:12px;
+  text-transform: uppercase;
+  text-align: right;
+  padding:10px;
 }
 
 .Util-loading-background {
