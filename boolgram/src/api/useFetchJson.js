@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 function useFetchJson(url) {
     
     const [json, setJson] = useState(null)
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     const [hasError, setHasError] = useState(false)
 
     useEffect(() => {

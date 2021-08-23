@@ -6,8 +6,8 @@ function PostsContainer() {
 
   const [posts, isLoading, hasError] = useFetchJson(GET_POSTS_URL)
 
-  if (posts==null) {
-    return null 
+  if (isLoading) {
+    return <Post showLoading={true} />
   }
 
   return posts.map(post=>(<Post post={post}/>))

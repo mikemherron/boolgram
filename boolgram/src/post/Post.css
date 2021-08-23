@@ -27,6 +27,13 @@
     margin-bottom: 3px;
   }
   
+  .Post-header-placeholder {
+    background-color: #EEE;
+    height:20px;
+    width:150px;
+  }
+
+
   .Post-header-name {
     color: #262626;
     font-weight: bold;

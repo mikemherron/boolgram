@@ -8,6 +8,22 @@ import moment from 'moment';
 const MAX_SHOWN_COMMENTS = 2
 
 function Post(props) {
+    if (props.showLoading===true){
+        return (
+            <article className="Post">
+                <header className="Post-header">
+                    <ProfileImageMedium showLoading={true}/>
+                    <div className="Post-header-name">
+                        <div className="Post-header-placeholder" />
+                    </div>
+                </header>
+                <section className="Post-header-image-container">
+                    <img className="Post-header-image Util-loading-background"></img>
+                </section>
+            </article>
+        )
+    };
+
     return (
         <article className="Post">
             <header className="Post-header">

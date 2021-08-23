@@ -8,6 +8,10 @@ function StoriesContainer() {
   
   const [profiles, isLoading, hasError] = useFetchJson(GET_PROFILES_URL)
  
+  if(isLoading) {
+    return <Stories showLoading={true}/>;  
+  }
+
   if(profiles==null) {
     return null;
   }

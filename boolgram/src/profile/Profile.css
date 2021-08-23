@@ -13,7 +13,12 @@
     margin:2px;
     z-index:100;
   }
-  
+
+.ProfileImageLoading {
+    background-color: #EEE;   
+    border:none; 
+}
+
   .ProfileImage--small{
     width:24px;
     height: 24px;
