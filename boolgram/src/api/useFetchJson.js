@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 
 function useFetchJson(url) {
 
-    const [json, setJson] = useState(null)
-    const [isLoading, setIsLoading] = useState(true)
-    const [hasError, setHasError] = useState(false)
+    const [json, setJson] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
@@ -12,26 +12,26 @@ function useFetchJson(url) {
             try {
                 const response = await fetch(url);
                 if (!response.ok) {
-                    setHasError(true)
+                    setHasError(true);
                 }
                 else {
-                    const json = await response.json()
-                    setJson(json)
+                    const json = await response.json();
+                    setJson(json);
                 }
             }
             catch (e) {
-                setHasError(true)
+                setHasError(true);
             }
             finally {
-                setIsLoading(false)
+                setIsLoading(false);
             }
-        }
+        };
 
-        fetchJson()
+        fetchJson();
 
-    }, [url])
+    }, [url]);
 
-    return [json, isLoading, hasError]
+    return [json, isLoading, hasError];
 }
 
 export default useFetchJson;

@@ -1,4 +1,5 @@
 import './Post.css';
+import React from 'react';
 
 import moment from 'moment';
 import { Fragment } from 'react';
@@ -6,7 +7,7 @@ import { ProfileImageMedium, ProfileImageSmall } from 'profile/ProfileImage';
 import { IconButtonHeart, IconButtonComment } from 'icons/IconButton';
 import PostComment from './PostComment';
 
-const MAX_SHOWN_COMMENTS = 2
+const MAX_SHOWN_COMMENTS = 2;
 
 function Post(props) {
     return (

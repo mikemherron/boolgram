@@ -1,4 +1,5 @@
 import './Profile.css';
+import React from 'react';
 
 const SIZE_SMALL = "small";
 const SIZE_MEDIUM = "medium";

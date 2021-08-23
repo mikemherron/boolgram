@@ -1,4 +1,4 @@
-import './Stories.css'
+import './Stories.css';
 import React from 'react';
 import { ProfileImageLarge } from 'profile/ProfileImage';
 
@@ -14,7 +14,7 @@ function Stories(props) {
                 <li key={i}>
                     <ProfileImageLarge showLoading={true} />
                     <div className="Stories-profileName">&nbsp;</div>
-                </li>)
+                </li>);
         }
     }
     else {

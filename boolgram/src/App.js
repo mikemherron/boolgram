@@ -1,8 +1,8 @@
 import './App.css';
-
+import React from 'react';
 import { IconButtonHeart, IconButtonHome } from 'icons/IconButton';
 import { ProfileImageSmall } from 'profile/ProfileImage';
-import LoggedInPlaceholder from 'profile/logged-in-profile.png'
+import LoggedInPlaceholder from 'profile/logged-in-profile.png';
 import PostsContainer from 'post/PostsContainer';
 import StoriesContainer from 'stories/StoriesContainer';
 
