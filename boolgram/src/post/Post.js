@@ -71,11 +71,11 @@ function Post(props) {
                         <span>{moment(props.post.date.date, 'YYYY-MM-DD HH:mm:ss.S').fromNow()}</span>
                     </section>
                     <section className="Post-add-comment">
-                        <form onSubmit={e => {handleSubmit(e);}}>
+                        <form onSubmit={e => handleSubmit(e)}>
                             <button>
                                 <IconButtonEmoji />
                             </button>
-                            <textarea onChange={e => setComment(e.target.value)} value={comment} placeholder="Add a comment…" autoComplete="off" autoCorrect="off"></textarea>
+                            <input onChange={e => setComment(e.target.value)} value={comment} placeholder="Add a comment…" autoComplete="off" autoCorrect="off"></input>
                             <button className="Post-add-comment-submit" disabled={comment==""} type="submit">Post</button>
                         </form>
                     </section>
