@@ -82,3 +82,48 @@
 .Post-text {
     padding-left: 16px;
 }
+
+.Post-add-comment {
+    border-top: 1px solid #efefef;
+    padding: 10px 0;
+}
+
+.Post-add-comment form{
+    display: flex;
+    align-items: center;
+}
+
+.Post-add-comment button{
+    background-color: transparent;
+    border:none;
+    color:#0095f6;
+    font-weight: bold;
+    font-size:14px;
+}
+
+.Post-add-comment button:disabled{
+    color:#c3e7ff;
+}
+
+.Post-add-comment-submit{
+    margin-right:10px;
+}
+
+.Post-add-comment textarea{
+    border:none;
+    color: #262626;
+    background: 0 0;
+    height: 18px;
+    font-size:14px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    overflow: auto;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+    width: 100%;;
+}
+
+.Post-add-comment textarea:focus-visible {
+    border:none;
+}

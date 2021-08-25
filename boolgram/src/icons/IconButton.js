@@ -4,6 +4,7 @@ import React from 'react';
 import IconComment from "./icon-comment.svg";
 import IconHeartSvg from "./icon-heart.svg";
 import IconHome from "./icon-home.svg";
+import IconEmoji from "./icon-emoji.svg";
 
 function IconButton(props) {
   return (
@@ -23,4 +24,8 @@ export function IconButtonHeart() {
 
 export function IconButtonHome() {
   return <IconButton imageSrc={IconHome} imageAlt='Home'></IconButton>;
+}
+
+export function IconButtonEmoji() {
+  return <IconButton imageSrc={IconEmoji} imageAlt='Emoji'></IconButton>;
 }

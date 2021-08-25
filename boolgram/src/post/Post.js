@@ -1,15 +1,27 @@
 import './Post.css';
-import React from 'react';
 import moment from 'moment';
-import { Fragment } from 'react';
-
-import { ProfileImageMedium, ProfileImageSmall } from 'profile/ProfileImage';
-import { IconButtonHeart, IconButtonComment } from 'icons/IconButton';
 import PostComment from './PostComment';
+import LoggedInProfileName from 'profile/LoggedInProfileName';
+import { Fragment, React, useState} from 'react';
+import { ProfileImageMedium, ProfileImageSmall } from 'profile/ProfileImage';
+import { IconButtonHeart, IconButtonComment, IconButtonEmoji } from 'icons/IconButton';
 
 const MAX_SHOWN_COMMENTS = 2;
 
 function Post(props) {
+
+    const [comment, setComment] = useState("");
+    const [addedComments, setAddedComments] = useState([]);
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        props.onAddComment(comment);
+        setAddedComments(addedComments => [{"username" : LoggedInProfileName, "text" : comment}, ...addedComments]);
+        setComment("");
+    }
+
+    const allComments = props.showLoading ? [] : addedComments.concat(props.post.comments);
+    
     return (
         <article className="Post">
             <header className="Post-header">
@@ -45,18 +57,27 @@ function Post(props) {
                     <section className="Post-text">
                         <PostComment username={props.post.profile_name} text={props.post.post_text} />
                     </section>
-                    {props.post.comments.length > 0 &&
+                        {allComments.length > 0 &&
                         <section className="Post-comments">
-                            {props.post.comments.length > MAX_SHOWN_COMMENTS &&
-                                <div className="Post-view-all-comments"><span>View all {props.post.comments.length} comments</span></div>
+                            {allComments.length > MAX_SHOWN_COMMENTS &&
+                                <div className="Post-view-all-comments"><span>View all {allComments.length} comments</span></div>
                             }
-                            {props.post.comments.slice(0, MAX_SHOWN_COMMENTS).map((comment, index) => (
+                            {allComments.slice(0, MAX_SHOWN_COMMENTS).map((comment, index) => (
                                 <PostComment key={index} username={comment.username} text={comment.text} />))
                             }
                         </section>
                     }
                     <section className="Post-time">
                         <span>{moment(props.post.date.date, 'YYYY-MM-DD HH:mm:ss.S').fromNow()}</span>
+                    </section>
+                    <section className="Post-add-comment">
+                        <form onSubmit={e => {handleSubmit(e);}}>
+                            <button>
+                                <IconButtonEmoji />
+                            </button>
+                            <textarea onChange={e => setComment(e.target.value)} value={comment} placeholder="Add a comment…" autoComplete="off" autoCorrect="off"></textarea>
+                            <button className="Post-add-comment-submit" disabled={comment==""} type="submit">Post</button>
+                        </form>
                     </section>
                 </Fragment>
             }
