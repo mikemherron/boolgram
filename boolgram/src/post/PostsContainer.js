@@ -14,7 +14,7 @@ function PostsContainer() {
     //to happen here to actually add the comment.
     console.log(post);
     console.log(comment);
-  };
+  }
 
   if (hasError) {
     return <Error message="Unable to load feed" />;
