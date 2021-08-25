@@ -9,11 +9,11 @@ function PostsContainer() {
 
   const [posts, isLoading, hasError] = useFetchJson(GET_POSTS_URL);
   
-  const onAddComment = (post, comment) => {
-    console.log(post);
-    console.log(comment);
+  function onAddComment(post, comment){
     //In an actual application I'd expect another API call
     //to happen here to actually add the comment.
+    console.log(post);
+    console.log(comment);
   };
 
   if (hasError) {
